@@ -13,3 +13,16 @@ class hangman ():#create class
         else:
             self.__init__()
 
+    def start_game(self):
+        print "Make 6 guesses and you are dead"
+        self.core_game()
+
+    def core_game(self):
+        guesses = 0
+        letters_used = ""
+        the_word = "pizza"
+        progress = ["?", "?", "?"]
+
+        while guesses < 6:
+            guess = raw_input("Guess a letter ->")
+
