@@ -44,4 +44,78 @@ class hangman ():#create class
 			else:
 				print "Try again!"
 
+    def hangman_graphic(self, guesses):
+        if guesses == 0:
+            print "__________ "
+            print "|        | "
+            print "|          "
+            print "|          "
+            print "|          "
+            print "|          "
+
+        elif guesses == 1:
+            print "__________ "
+            print "         | "
+            print "         0 "
+            print "           "
+            print "           "
+            print "           "
+
+        elif guesses == 2:
+            print "__________ "
+            print "         | "
+            print "         0 "
+            print "        /  "
+            print "           "
+            print "           "
+
+        elif guesses == 3:
+            print "__________ "
+            print "         | "
+            print "         0 "
+            print "        /| "
+            print "           "
+            print "           "
+
+        elif guesses == 4:
+            print "__________ "
+            print "         | "
+            print "         0 "
+            print "        /|\ "
+            print "           "
+            print "           "
+
+        elif guesses == 5:
+            print "__________ "
+            print "         | "
+            print "         0 "
+            print "        /|\ "
+            print "        /  "
+            print "           "
+
+        else:
+            print "__________ "
+            print "         | "
+            print "         0 "
+            print "        /|\ "
+            print "        / \  "
+            print "           "
+
+            print "GAME OVER!"
+            self.__init__()
+
+    def progress_updater(self, guess, the_word, progress):
+        i = 0
+        while i < len(the_word):
+            if guess == the_word[i]:
+                progress[i] = guess
+                i += 1
+            else:
+                i += 1
+
+        return "".join(progress)
+
+game = Hangman()
+
+
 
