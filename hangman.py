@@ -25,3 +25,23 @@ class hangman ():#create class
 
         while guesses < 6:
             guess = raw_input("Guess a letter ->")
+
+            guess = raw_input("Guess a letter ->")
+
+			if guess in the_word and not in letters_used:
+				print "As it turns out, your guess was RIGHT!"
+				letters_used += "," + guess
+				self.hangman_graphic(guesses)
+				print "Progress: " + self.progress_updater(guess, the_word, progress)
+				print "Letter used: " + letters_used
+			elif guess not in the_word and not(in letters_used):
+				guesses += 1
+				print "Things aren't looking so good, that guess was WRONG!"
+				letters_used += "," + guess
+				self.hangman_graphic(guesses)
+				print "Progress: " + "".join(progress)
+				print "Letter used: " + letters_used
+			else:
+				print "Try again!"
+
+
