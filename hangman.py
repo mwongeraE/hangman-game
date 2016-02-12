@@ -25,4 +25,3 @@ class hangman ():#create class
 
         while guesses < 6:
             guess = raw_input("Guess a letter ->")
-
