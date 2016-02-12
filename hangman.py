@@ -1,0 +1,1 @@
+class hangman (): #create class
